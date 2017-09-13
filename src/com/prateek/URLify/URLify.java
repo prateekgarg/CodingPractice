@@ -2,7 +2,7 @@ package com.prateek.URLify;
 
 public class URLify {
 
-    //Problem statement: Function to replace all the spaces in a string into %20 (like in a URL
+    //Problem statement: Function to replace all the spaces in a string into %20 (like in a URL)
     //Assumption is that there is enough space at the end of the string to hold the extra characters
 
     private String input;
@@ -34,7 +34,7 @@ public class URLify {
             return null;
         } else {
             char[] arr = this.input.toCharArray();
-            System.out.println(this.input);
+            //System.out.println(this.input);
             //StringBuilder sb = new StringBuilder();
             int lastChar = 0;
             //learn the last character of the actual string, that is not involved with the "extra" space for our convenience
