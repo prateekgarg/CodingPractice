@@ -4,7 +4,11 @@ import java.util.HashSet;
 
 class Solution {
     public static void main(String args[]) {
-        int[] solution = twoSum(new int[]{1, 2, 3, 4}, 6);
+        /*
+        Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+        You may assume that each input would have exactly one solution, and you may not use the same element twice.
+        * */
+        int[] solution = twoSum(new int[]{1, 2, 3, 4}, 6);      //should return 1 3
         System.out.println(solution[0] + " " + solution[1]);
     }
 
@@ -17,6 +21,7 @@ class Solution {
             int first = nums[i];
             int second = target - first;
             if (hs.contains(second)) {
+                //executed only once, so the complexity is still linear
                 for (int j = i + 1; j < nums.length; j++) {
                     if (nums[j] == target - nums[i]) {
                         return new int[]{i, j};
