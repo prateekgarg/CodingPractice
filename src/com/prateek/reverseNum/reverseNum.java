@@ -8,7 +8,7 @@ public class reverseNum {
         System.out.println(reverse(-123));   //should return -321
         System.out.println(reverse(111));   //should return 111
         System.out.println(reverse(1234567899));   //should return 0
-        System.out.println(reverse(-1234567899));   //should return 0
+        System.out.println(reverse(-2147483648));   //should return 0
 
     }
 
@@ -16,9 +16,9 @@ public class reverseNum {
         boolean flag = false;
         if (x < 0) {
             flag = true;
-            x = -1 * x;
+            x = -x;
         }
-        if (x < 10) {
+        if (x < 10 && x > -10) {
             if (flag) {
                 return -1 * x;
             } else {
